@@ -11,7 +11,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-bot.on("ready", function(){
+client.on("ready", function(){
     console.log("I've been waiting for this!");
 });
 
@@ -20,7 +20,7 @@ client.login(process.env.BOT_TOKEN);
 
 /WELCOME/ 
 
-bot.on("guildMemberAdd", function(member){
+client.on("guildMemberAdd", function(member){
     var membername = member.toString();
     var sentences = new Array(10);
     var random = getRandomInt(0,4); // lay random so (so' toi thieu, so' toi da)
@@ -308,7 +308,7 @@ var dirtyTalk = ["Let our bodies do the talking.",
 ];
 
 
-bot.on("message", function(message){
+client.on("message", function(message){
 var msgCase = message.content.toLocaleLowerCase();
 if (message.author.equals(bot.user)) return;
 
@@ -398,4 +398,4 @@ if (!message.content.startsWith(PREFIX)) return;
     };
 });
 
-bot.login(token);
+client.login(token);
