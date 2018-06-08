@@ -1,8 +1,17 @@
 const Discord = require('discord.js');
 var bot = new Discord.Client();
 
-bot.on('ready', () => {
-    console.log('I am ready!');
+const token = "Mzg0NTc0NDY2NTY0NDIzNjkw.DP0ycQ.HH7VpXW1pJnQJ48Ior1DmBISXws";
+const PREFIX = ".";
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+bot.on("ready", function(){
+    console.log("I've been waiting for this!");
 });
 
 bot.on('message', message => {
@@ -10,19 +19,5 @@ bot.on('message', message => {
         message.reply('I love you');
     }
 });
-    
-if (msgCase.includes("say fuck")) {
-var mentions = new Array(10);
-var random = getRandomInt(0,7); 
-mentions[0] = "... F-fuck?";
-mentions[1] = "H-Hamuko!";
-mentions[2] = "FUCK!";
-mentions[3] = "Don't swear!";
-mentions[4] = "Do you ever stop?";
-mentions[5] = "fucckkk got dammmmmmmmmmmit sonnnn of a bitchhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh ahhhhhhhhhhhhhhhhhhhhhhhhhhhh I spilled my baja blast";
-mentions[6] = "Stop bossing me around!"
-mentions[7] = "Tch! Fuck off!";
-message.channel.sendMessage(mentions[random]);
-};
 
 bot.login(process.env.BOT_TOKEN);
