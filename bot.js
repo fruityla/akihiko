@@ -11,6 +11,9 @@ client.on('message', message => {
     }
 });
 
+//THIS MUST BE THIS WAY
+bot.login(process.env.BOT_TOKEN);
+
 /WELCOME/ 
 
 bot.on("guildMemberAdd", function(member){
@@ -390,6 +393,3 @@ if (!message.content.startsWith(PREFIX)) return;
 
     };
 });
-
-//THIS MUST BE THIS WAY
-bot.login(process.env.BOT_TOKEN);
