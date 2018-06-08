@@ -16,7 +16,7 @@ bot.on("ready", function(){
 
 bot.on('message', message => {
     if (message.content === 'akihiko') {
-        message.reply("I'll love you");
+        message.reply("I'll be sure to make you happy.");
     }
 });
 
