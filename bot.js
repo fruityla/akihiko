@@ -7,14 +7,14 @@ bot.on('ready', () => {
 
 bot.on('message', message => {
     if (message.content === 'akihiko') {
-        message.reply('ready!');
+        message.reply('yes?');
     }
 });
     
 bot.on("guildMemberAdd", function(member){
     var membername = member.toString();
     var sentences = new Array(10);
-    var random = getRandomInt(0,4); // lay random so (so' toi thieu, so' toi da)
+    var random = getRandomInt(0,4);
     sentences[0] = "It's about time you got here, "+membername;
     sentences[1] = membername+", welcome home.";
     sentences[2] = membername+", where have you been?";
