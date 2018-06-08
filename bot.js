@@ -1,14 +1,18 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+cconst Discord = require("discord.js");
+var bot = new Discord.Client();
 
-client.on('ready', () => {
-    console.log('I am ready!');
-});
+const token = "Mzg0NTc0NDY2NTY0NDIzNjkw.DP0ycQ.HH7VpXW1pJnQJ48Ior1DmBISXws";
+const PREFIX = ".";
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-        message.reply('pong');
-    }
+/RANDOM WELCOME FUNCTION /
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+bot.on("ready", function(){
+    console.log("I've been waiting for this!");
 });
 
 //THIS MUST BE THIS WAY
