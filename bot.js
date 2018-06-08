@@ -15,9 +15,6 @@ client.on("ready", function(){
     console.log("I've been waiting for this!");
 });
 
-//THIS MUST BE THIS WAY
-client.login(process.env.BOT_TOKEN);
-
 /WELCOME/ 
 
 client.on("guildMemberAdd", function(member){
@@ -398,4 +395,4 @@ if (!message.content.startsWith(PREFIX)) return;
     };
 });
 
-client.login(token);
+client.login(process.env.BOT_TOKEN);
