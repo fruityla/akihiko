@@ -7,7 +7,7 @@ bot.on('ready', () => {
 
 bot.on('message', message => {
     if (message.content === 'akihiko') {
-        message.reply('Ready!');
+        message.reply('ready!');
     }
 });
     
